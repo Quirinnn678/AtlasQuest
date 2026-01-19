@@ -710,3 +710,74 @@ body.quiz-screen-active #true-size-panel {
   font-size: 11px;
   color: #4b5563;
 }
+
+
+@media (max-width: 640px) {
+  .start-card {
+    padding: 20px;
+    width: min(360px, 92vw);
+  }
+
+  .start-title {
+    font-size: 18px;
+  }
+
+  .start-btn {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+
+  #info-panel {
+    top: 96px;
+    max-width: 320px;
+    width: min(320px, 92vw);
+    font-size: 15px;
+  }
+
+  #info-panel h1 {
+    font-size: 20px;
+  }
+
+  #info-panel p,
+  #info-facts li {
+    font-size: 15px;
+  }
+
+  #progress-pill {
+    font-size: 12px;
+  }
+
+  #status-target {
+    font-size: 13px;
+  }
+
+  #status-progress {
+    font-size: 12px;
+  }
+
+  #quiz-panel {
+    width: min(320px, 92vw);
+    font-size: 14px;
+  }
+
+  .quiz-label {
+    font-size: 12px;
+  }
+
+  #quiz-target {
+    font-size: 15px;
+  }
+
+  #quiz-feedback {
+    font-size: 12px;
+  }
+
+  .quiz-home-btn {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  .currency-option-btn {
+    font-size: 15px;
+  }
+}
