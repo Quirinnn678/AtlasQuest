@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e2d3bc"/>
+      <stop offset="1" stop-color="#b1926a"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="128" cy="214" rx="92" ry="16" fill="#c6b091" opacity="0.55"/>
+
+  <path d="M56 192 L128 112 L200 192 Z" fill="url(#stone)" stroke="#3a2a20" stroke-width="4" stroke-linejoin="round"/>
+  <rect x="64" y="192" width="128" height="24" fill="url(#stone)" stroke="#3a2a20" stroke-width="4"/>
+
+  <g stroke="#3a2a20" stroke-width="4" stroke-linecap="round" fill="url(#stone)">
+    <rect x="78" y="132" width="16" height="60"/>
+    <rect x="108" y="132" width="16" height="60"/>
+    <rect x="138" y="132" width="16" height="60"/>
+    <rect x="168" y="132" width="16" height="60"/>
+  </g>
+
+  <rect x="72" y="120" width="112" height="12" fill="url(#stone)" stroke="#3a2a20" stroke-width="3"/>
+</svg>

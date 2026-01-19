@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="brick" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0c7aa"/>
+      <stop offset="1" stop-color="#a97b57"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="128" cy="214" rx="96" ry="16" fill="#c6b091" opacity="0.55"/>
+
+  <rect x="48" y="132" width="48" height="72" fill="url(#brick)" stroke="#3a2a20" stroke-width="4"/>
+  <rect x="104" y="104" width="48" height="100" fill="url(#brick)" stroke="#3a2a20" stroke-width="4"/>
+  <rect x="160" y="144" width="48" height="60" fill="url(#brick)" stroke="#3a2a20" stroke-width="4"/>
+
+  <path d="M48 132 L72 112 L96 132" fill="url(#brick)" stroke="#3a2a20" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M104 104 L128 82 L152 104" fill="url(#brick)" stroke="#3a2a20" stroke-width="4" stroke-linejoin="round"/>
+
+  <path d="M120 154 L136 154" stroke="#3a2a20" stroke-width="3" stroke-linecap="round"/>
+  <path d="M120 170 L136 170" stroke="#3a2a20" stroke-width="3" stroke-linecap="round"/>
+</svg>

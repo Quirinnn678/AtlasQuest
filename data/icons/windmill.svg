@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7c3a5"/>
+      <stop offset="1" stop-color="#9c7a55"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7b5a3b"/>
+      <stop offset="1" stop-color="#4b3626"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="128" cy="210" rx="90" ry="18" fill="#c6b091" opacity="0.6"/>
+
+  <path d="M96 208 L128 86 L160 208 Z" fill="url(#wood)" stroke="#3a2a20" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M128 86 L112 140 L100 178 L128 178 Z" fill="url(#roof)" opacity="0.5"/>
+
+  <path d="M112 86 L128 64 L144 86 Z" fill="url(#roof)" stroke="#3a2a20" stroke-width="3" stroke-linejoin="round"/>
+
+  <g stroke="#3a2a20" stroke-width="4" stroke-linecap="round">
+    <line x1="128" y1="96" x2="128" y2="24"/>
+    <line x1="128" y1="96" x2="200" y2="96"/>
+    <line x1="128" y1="96" x2="128" y2="168"/>
+    <line x1="128" y1="96" x2="56" y2="96"/>
+  </g>
+
+  <g stroke="#3a2a20" stroke-width="2" opacity="0.7">
+    <line x1="118" y1="48" x2="138" y2="48"/>
+    <line x1="168" y1="86" x2="168" y2="106"/>
+    <line x1="118" y1="144" x2="138" y2="144"/>
+    <line x1="88" y1="86" x2="88" y2="106"/>
+  </g>
+
+  <rect x="118" y="176" width="20" height="32" rx="3" fill="#3a2a20"/>
+</svg>

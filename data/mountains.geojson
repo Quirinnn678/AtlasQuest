@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {"type": "Feature", "properties": {"name": "Himalaya", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [86.9, 27.9]}},
+    {"type": "Feature", "properties": {"name": "Andes", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [-70.0, -15.0]}},
+    {"type": "Feature", "properties": {"name": "Rocky Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [-110.0, 44.5]}},
+    {"type": "Feature", "properties": {"name": "Alps", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [10.5, 46.5]}},
+    {"type": "Feature", "properties": {"name": "Atlas Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [-5.0, 32.0]}},
+    {"type": "Feature", "properties": {"name": "Ural Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [60.0, 60.0]}},
+    {"type": "Feature", "properties": {"name": "Caucasus", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [44.5, 42.5]}},
+    {"type": "Feature", "properties": {"name": "Appalachian Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [-81.5, 37.5]}},
+    {"type": "Feature", "properties": {"name": "Great Dividing Range", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [147.0, -32.0]}},
+    {"type": "Feature", "properties": {"name": "Scandinavian Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [9.0, 62.0]}},
+    {"type": "Feature", "properties": {"name": "Zagros Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [47.0, 33.0]}},
+    {"type": "Feature", "properties": {"name": "Tien Shan", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [80.0, 42.0]}},
+    {"type": "Feature", "properties": {"name": "Altai Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [88.0, 49.0]}},
+    {"type": "Feature", "properties": {"name": "Carpathian Mountains", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [24.5, 48.5]}},
+    {"type": "Feature", "properties": {"name": "Pyrenees", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [0.5, 42.7]}},
+    {"type": "Feature", "properties": {"name": "Japanese Alps", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [137.6, 36.2]}},
+    {"type": "Feature", "properties": {"name": "Southern Alps (NZ)", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [170.0, -43.5]}},
+    {"type": "Feature", "properties": {"name": "Drakensberg", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [29.5, -29.5]}},
+    {"type": "Feature", "properties": {"name": "Sierra Nevada (US)", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [-119.5, 37.5]}},
+    {"type": "Feature", "properties": {"name": "Sierra Madre Occidental", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [-106.0, 25.0]}},
+    {"type": "Feature", "properties": {"name": "Karakoram", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [76.5, 35.5]}},
+    {"type": "Feature", "properties": {"name": "Hindu Kush", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [70.0, 36.5]}},
+    {"type": "Feature", "properties": {"name": "Patagonian Andes", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [-73.0, -49.0]}},
+    {"type": "Feature", "properties": {"name": "Ethiopian Highlands", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [39.5, 11.5]}},
+    {"type": "Feature", "properties": {"name": "Central Range (Taiwan)", "kind": "mountain_range"}, "geometry": {"type": "Point", "coordinates": [121.0, 23.7]}}
+  ]
+}

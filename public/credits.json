@@ -1,0 +1,74 @@
+[
+  {
+    "name": "REST Countries API",
+    "type": "api",
+    "description": "Regions, capitals, currencies, UN/independent lists used to enrich country metadata.",
+    "license": "MIT (API); data sources vary (verify)",
+    "attribution": "Source: REST Countries",
+    "url": "https://restcountries.com/"
+  },
+  {
+    "name": "Wikidata EntityData API",
+    "type": "api",
+    "description": "Resolve QID to Wikipedia sitelinks for POI previews.",
+    "license": "CC0 1.0",
+    "attribution": "Data from Wikidata (CC0 1.0).",
+    "url": "https://www.wikidata.org/"
+  },
+  {
+    "name": "Wikidata SPARQL",
+    "type": "data",
+    "description": "Source for UNESCO cultural POIs and related CSV/GeoJSON exports.",
+    "license": "CC0 1.0",
+    "attribution": "Data from Wikidata (CC0 1.0).",
+    "url": "https://query.wikidata.org/"
+  },
+  {
+    "name": "Wikipedia / MediaWiki API",
+    "type": "api",
+    "description": "Preview text, thumbnails, and article links for POI clicks.",
+    "license": "CC BY-SA 3.0 / GFDL (text); image licenses vary",
+    "attribution": "Text and images from Wikipedia/Wikimedia; individual image licenses apply.",
+    "url": "https://www.wikipedia.org/"
+  },
+  {
+    "name": "MapLibre demo glyphs",
+    "type": "tiles",
+    "description": "Font glyphs used by MapLibre for label rendering.",
+    "license": "Unknown (verify)",
+    "attribution": "MapLibre demo tiles (glyphs).",
+    "url": "https://demotiles.maplibre.org/"
+  },
+  {
+    "name": "countries.geojson",
+    "type": "data",
+    "description": "Country polygons for the base map.",
+    "license": "Public Domain",
+    "attribution": "Country boundaries: Natural Earth, Admin 0 – Countries (1:10m) (derived/modified).",
+    "url": "https://www.naturalearthdata.com/"
+  },
+  {
+    "name": "mountains.geojson",
+    "type": "data",
+    "description": "Mountain ranges POI dataset.",
+    "license": "Unknown (verify)",
+    "attribution": "Source unknown (needs verification).",
+    "url": "Unknown"
+  },
+  {
+    "name": "lakes.geojson",
+    "type": "data",
+    "description": "Lakes dataset (present in repo; not currently loaded).",
+    "license": "Unknown (verify)",
+    "attribution": "Source unknown (needs verification).",
+    "url": "Unknown"
+  },
+  {
+    "name": "poi.geojson",
+    "type": "data",
+    "description": "UNESCO cultural POIs with manual categorization.",
+    "license": "CC0 1.0 (Wikidata); categorization custom",
+    "attribution": "Data from Wikidata (CC0 1.0).",
+    "url": "https://www.wikidata.org/"
+  }
+]

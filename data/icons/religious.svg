@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e1d0b8"/>
+      <stop offset="1" stop-color="#a9835f"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="128" cy="214" rx="92" ry="16" fill="#c6b091" opacity="0.55"/>
+
+  <rect x="96" y="124" width="64" height="80" fill="url(#stone)" stroke="#3a2a20" stroke-width="4"/>
+  <path d="M96 124 L128 92 L160 124" fill="url(#stone)" stroke="#3a2a20" stroke-width="4" stroke-linejoin="round"/>
+
+  <rect x="120" y="60" width="16" height="32" fill="url(#stone)" stroke="#3a2a20" stroke-width="3"/>
+  <path d="M112 68 L144 68" stroke="#3a2a20" stroke-width="3" stroke-linecap="round"/>
+
+  <path d="M120 164 A8 8 0 0 0 136 164" fill="none" stroke="#3a2a20" stroke-width="3"/>
+</svg>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wereldkaart prototype</title>
+
+  <!-- MapLibre CSS -->
+  <link
+    href="https://unpkg.com/maplibre-gl@4.4.0/dist/maplibre-gl.css"
+    rel="stylesheet"
+  />
+
+  <!-- Eigen CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="start-screen">
+    <div class="start-card">
+      <div class="start-title">Facts About Our World</div>
+      <button id="start-culture" class="start-btn">Culture Quizzes</button>
+      <button id="start-nature" class="start-btn">Nature Quizzes</button>
+      <button id="start-credits" class="start-btn ghost">Credits</button>
+    </div>
+  </div>
+  <div id="quiz-screen" class="hidden">
+    <div class="start-card quiz-card">
+      <div class="start-title" id="quiz-screen-title">Culture Quizzes</div>
+      <div id="quiz-screen-culture">
+        <button id="start-continents-quiz" class="start-btn" type="button">Continents quiz</button>
+        <button id="start-countries-quiz" class="start-btn" type="button">Countries quiz</button>
+        <button id="start-capitals-quiz" class="start-btn" type="button">Capitals quiz</button>
+        <button id="start-currencies-quiz" class="start-btn" type="button">Currencies quiz</button>
+        <button id="start-heritage-quiz" class="start-btn" type="button">Cultural Heritage quiz</button>
+      </div>
+      <div id="quiz-screen-nature" class="hidden">
+        <button id="start-mountains-quiz" class="start-btn" type="button">Mountain ranges quiz</button>
+        <div class="heritage-note">More nature quizzes coming soon.</div>
+      </div>
+      <button id="quiz-back" class="start-btn ghost" type="button">Back</button>
+    </div>
+  </div>
+  <div id="credits-screen" class="hidden">
+    <div class="start-card credits-card">
+      <div class="start-title">Credits / Data sources</div>
+      <div id="credits-list-screen">Loading…</div>
+      <button id="credits-back" class="start-btn ghost">Back</button>
+    </div>
+  </div>
+  <div id="map"></div>
+  <div id="quiz-toast" class="quiz-toast hidden" role="status" aria-live="polite"></div>
+
+  <!-- Menu knop -->
+  <button id="menu-btn">
+    Menu
+  </button>
+
+  <!-- Status bar -->
+  <div id="progress-pill">
+    <div class="status-line">
+      <span id="status-target">Kies een quiz om te starten.</span>
+      <img id="status-flag" alt="Flag" />
+    </div>
+    <div id="status-progress"></div>
+  </div>
+
+  <!-- Quiz-paneel -->
+  <div id="quiz-panel" class="hidden">
+    <div id="continent-picker" class="hidden">
+      <div class="quiz-label">Kies een continent</div>
+      <div id="continent-options" class="chip-grid"></div>
+      <div class="picker-actions">
+        <button id="continent-all" class="quiz-home-btn">Alle continenten</button>
+        <div class="picker-actions-right">
+          <button id="continent-cancel" class="quiz-home-btn">Annuleren</button>
+          <button id="continent-confirm" class="quiz-home-btn secondary">Start quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="heritage-picker" class="hidden">
+      <div class="quiz-label">Kies een categorie</div>
+      <div id="heritage-options" class="chip-grid"></div>
+      <div class="picker-actions">
+        <div class="picker-actions-right">
+          <button id="heritage-cancel" class="quiz-home-btn">Annuleren</button>
+          <button id="heritage-confirm" class="quiz-home-btn secondary">Start quiz</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="quiz-active" class="hidden">
+      <div class="quiz-header">
+        <div class="quiz-label">Quiz actief</div>
+        <button id="change-quiz-btn">Menu</button>
+      </div>
+
+      <p id="quiz-target">Target: –</p>
+      <p id="quiz-feedback">Click the target country on the map.</p>
+      <div id="warmth-meter" aria-hidden="true"></div>
+      <div id="currency-options" class="hidden">
+        <button class="currency-option-btn"></button>
+        <button class="currency-option-btn"></button>
+        <button class="currency-option-btn"></button>
+        <button class="currency-option-btn"></button>
+        <div id="currency-reveal" class="hidden"></div>
+      </div>
+      <button id="currency-next-btn" class="quiz-home-btn hidden">Volgende currency</button>
+    </div>
+  </div>
+
+
+  <!-- Info-paneel bovenop de kaart -->
+  <div id="info-panel">
+    <div id="info-pill">Country</div>
+    <div class="info-header">
+      <h1 id="info-country">Explore topics on the map</h1>
+      <img id="wiki-thumb" alt="Wikipedia preview" />
+    </div>
+    <div class="info-section" id="facts-block">
+      <ul id="info-facts"></ul>
+      <button id="facts-toggle" class="facts-toggle hidden" type="button">Meer feiten</button>
+    </div>
+    <p id="info-tagline">
+      Click a heritage site to see a short summary.
+    </p>
+
+    <div class="info-section" id="wiki-block">
+      <div id="wiki-extract"></div>
+      <a id="wiki-link" class="wiki-link" href="#" target="_blank" rel="noopener">Wikipedia</a>
+      <div id="wiki-source" class="wiki-source">Info &amp; image via Wikipedia/Wikimedia</div>
+    </div>
+
+    <details class="info-section" id="nature-controls" open>
+      <summary>Nature</summary>
+      <div class="heritage-group">
+        <label class="heritage-toggle">
+          <input type="checkbox" id="toggle-mountains" checked />
+          Mountain ranges
+        </label>
+      </div>
+      <div class="heritage-group">
+      </div>
+    </details>
+
+    <details class="info-section" id="culture-controls" open>
+      <summary>Culture</summary>
+      <div class="heritage-group">
+        <div class="heritage-subtitle">Heritage visibility</div>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-fame-3" checked />
+          Iconic heritage
+        </label>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-fame-2" checked />
+          Recognized heritage
+        </label>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-fame-1" checked />
+          Lesser-known heritage
+        </label>
+      </div>
+      <div class="heritage-group">
+        <div class="heritage-subtitle">Categories</div>
+        <div class="heritage-actions">
+          <button type="button" class="heritage-action-btn" id="select-all-categories">Select all</button>
+          <button type="button" class="heritage-action-btn" id="deselect-all-categories">Deselect all</button>
+        </div>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-cat-built-archaeological" class="heritage-check built-archaeological" checked />
+          Built archaeological
+        </label>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-cat-art-symbolic" class="heritage-check art-symbolic" checked />
+          Art & symbolic
+        </label>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-cat-cultural-landscapes" class="heritage-check cultural-landscapes" checked />
+          Cultural landscapes
+        </label>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-cat-historic-cities" class="heritage-check historic-cities" checked />
+          Historic cities
+        </label>
+        <label class="heritage-toggle">
+          <input type="checkbox" id="filter-cat-engineering-industry" class="heritage-check engineering-industry" checked />
+          Engineering & industry
+        </label>
+      </div>
+      <div class="heritage-group">
+        <div class="heritage-subtitle">Other culture topics</div>
+        <div class="heritage-note">Languages, currencies (quiz-ready)</div>
+      </div>
+    </details>
+
+
+  </div>
+
+  <!-- True size inset (equal-area mini-map) -->
+  <div id="true-size-panel">
+    <div id="true-size-title">True size</div>
+    <canvas id="true-size-canvas" width="220" height="160"></canvas>
+    <p id="true-size-caption">Click a country to see its area in equal-area view.</p>
+  </div>
+
+  <!-- MapLibre JS -->
+  <script src="https://unpkg.com/maplibre-gl@4.4.0/dist/maplibre-gl.js"></script>
+
+  <!-- Turf.js voor bbox-berekeningen -->
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+  <!-- d3-geo voor equal-area mini-map (true size) -->
+  <script src="https://unpkg.com/d3-geo@1.12.1"></script>
+
+  <!-- Curated country facts (eigen content) -->
+  <script src="js/facts.js"></script>
+
+  <!-- Eigen JS (app-logica) -->
+  <script src="js/app.js"></script>
+</body>
+</html>
